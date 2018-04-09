@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'blog',
     'rest_framework',
+    'django_filters',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,3 +127,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+# REST_FRAMEWORKの設定
+REST_FRAMEWORK = {
+# 表示する際のページ数を決める
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2
+}
+
+DJANGO_FILTERS = {
+}
+
+DEFAULT_FILTER_BACKENDS = {
+}

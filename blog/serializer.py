@@ -22,7 +22,9 @@ class CustomUserSerializer(UserSerializer):
 
     # このget_methodで取得が可能となる
     def get_value(self, obj):
-        return obj.name
+        #return obj 
+        return {"id": "あいうえお", "gorira": "かきくけこ"}
+        #return obj.name
     
 
 class EntrySerializer(serializers.ModelSerializer):

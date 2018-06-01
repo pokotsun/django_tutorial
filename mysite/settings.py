@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'blog',
+    'django_extensions',
     'rest_framework',
     'django_filters',
     'polls.apps.PollsConfig',
